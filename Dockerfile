@@ -4,4 +4,4 @@ WORKDIR /usr/src/bot
 COPY . /usr/src/bot/
 RUN npm install && npm run build
 # RUN --mount=type=secret,id=configsec,destination=/usr/src/bot/src/config.json npm run build
-CMD npm run start
+# CMD npm run start
