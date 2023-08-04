@@ -16,7 +16,8 @@ bot.once(Events.ClientReady, event => {
 })
 
 const btk = process.env.btk
-bot.login(btk)
+console.log(btk)
+// bot.login(btk)
 
 //shutdown
 process.on('SIGINT', function() {
