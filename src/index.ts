@@ -1,5 +1,4 @@
 import { Client, IntentsBitField, Events} from "discord.js";
-// import {botToken} from "./config.json"
 import { CommandInterface, Commander } from "./commander";
 import { CommandsCollection } from "./commandsList";
 
@@ -16,8 +15,7 @@ bot.once(Events.ClientReady, event => {
 })
 
 const btk = process.env.btk
-console.log(btk)
-// bot.login(btk)
+bot.login(btk)
 
 //shutdown
 process.on('SIGINT', function() {
