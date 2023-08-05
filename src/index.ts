@@ -1,6 +1,7 @@
 import { Client, IntentsBitField, Events} from "discord.js";
 import { CommandInterface, Commander } from "./commander";
 import { CommandsCollection } from "./commandsList";
+import { readFileSync } from "fs";
 
 const intentBits = new IntentsBitField()
 intentBits.add(IntentsBitField.Flags.Guilds, IntentsBitField.Flags.MessageContent)
@@ -15,8 +16,8 @@ bot.once(Events.ClientReady, event => {
 })
 
 const btk = process.env.btk
-console.log(btk)
-// bot.login(btk)
+let token = readFileSync(btk!, 'utf-8')
+bot.login(token)
 
 //shutdown
 process.on('SIGINT', function() {

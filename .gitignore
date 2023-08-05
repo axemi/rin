@@ -3,3 +3,4 @@ src/config.json
 node_modules
 config.json
 .env
+docker-compose.yml
